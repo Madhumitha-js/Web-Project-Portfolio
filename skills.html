@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Madhumitha – Skills</title>
+  <style>
+    /* Reuse styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f3f0 0%, #ede8e3 100%);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(245, 243, 240, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem 0;
+        z-index: 1000;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #0ab475;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+    }
+
+    .nav-link:hover {
+        color: #0ab475;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: #0ab475;
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .contact-btn {
+        background: #0ab475;
+        color: white;
+        padding: 0.8rem 2rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 2px solid #0ab475;
+    }
+
+    .contact-btn:hover {
+        background: transparent;
+        color: #0ab475;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+    }
+
+
+    .main-content {
+      margin-top: 100px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .skills-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .skills-section h1 {
+      text-align: center;
+      color: #0ab475;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .skill-category {
+      background: rgba(0, 170, 119, 0.05);
+      padding: 1.5rem 2rem;
+      border-left: 5px solid #0ab475;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .skill-category h2 {
+      font-size: 1.5rem;
+      color: #0ab475;
+      margin-bottom: 1rem;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .skill-item {
+      background: white;
+      padding: 0.7rem 1.2rem;
+      border: 1px solid #0ab475;
+      border-radius: 20px;
+      color: #0ab475;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .skill-item:hover {
+      background: #0ab475;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(139, 69, 19, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .main-content { padding: 1rem; }
+      .skills-section h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">Madhumitha</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="skills.html" class="nav-link">Skills</a></li>
+        <li><a href="proj.html" class="nav-link">Projects</a></li>
+        <li><a href="tel:+919791480068" class="contact-btn">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="skills-section">
+      <h1>My Skills</h1>
+
+      <div class="skill-category">
+        <h2>Frontend Development</h2>
+        <div class="skill-list">
+          <div class="skill-item">HTML5</div>
+          <div class="skill-item">CSS3</div>
+          <div class="skill-item">JavaScript</div>
+          <div class="skill-item">Responsive Design</div>
+          <div class="skill-item">Bootstrap</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h2>Embedded Systems</h2>
+        <div class="skill-list">
+          <div class="skill-item">Arduino</div>
+          <div class="skill-item">STM32</div>
+          <div class="skill-item">Microcontroller Programming</div>
+          <div class="skill-item">Sensors & Actuators</div>
+          <div class="skill-item">Proteus</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h2>Programming Languages</h2>
+        <div class="skill-list">
+          <div class="skill-item">C</div>
+          <div class="skill-item">C++</div>
+          <div class="skill-item">Python</div>
+          <div class="skill-item">Java</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h2>Tools & Platforms</h2>
+        <div class="skill-list">
+          <div class="skill-item">Git & GitHub</div>
+          <div class="skill-item">VS Code</div>
+          <div class="skill-item">Arduino IDE</div>
+          <div class="skill-item">STM32CubeIDE</div>
+          <div class="skill-item">Blynk</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.addEventListener('load', () => {
+      const sec = document.querySelector('.skills-section');
+      sec.style.opacity = 0;
+      sec.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        sec.style.transition = 'all 1s ease';
+        sec.style.opacity = 1;
+        sec.style.transform = 'translateY(0)';
+      }, 100);
+    });
+  </script>
+</body>
+</html>
