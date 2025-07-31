@@ -344,6 +344,47 @@
                 font-size: 1.5rem;
             }
         }
+        .hamburger {
+        display: none;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        color: #0ab475;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    @media (max-width: 768px) {
+        .hamburger {
+            display: block;
+        }
+
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            background: white;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .nav-menu.active {
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin: 1rem 0;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+    }
     </style>
 </head>
 <body>
@@ -356,6 +397,7 @@
     <header class="header">
         <nav class="nav-container">
             <a href="#" class="logo">Madhumitha</a>
+            <button class="hamburger" aria-label="Menu">☰</button>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -430,7 +472,7 @@
             }, 100);
         });
 
-        // Mobile menu toggle (you can expand this later)
+        
         const header = document.querySelector('.header');
         window.addEventListener('scroll', function() {
             if (window.scrollY > 100) {
@@ -438,6 +480,13 @@
             } else {
                 header.style.background = 'rgba(245, 243, 240, 0.95)';
             }
+        });
+       
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
         });
     </script>
 </body>
